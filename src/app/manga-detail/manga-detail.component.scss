@@ -1,0 +1,90 @@
+
+
+
+
+
+@media only screen and (max-width: 575px) {
+    .cardImage{
+        width: 100%;
+    }
+    .titleContent{
+        font-size: large;
+    }
+    .descriptionText{
+        font-size: small;
+    }
+    .dataGenres{
+        font-size: small;
+        border-radius: 0.25rem;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+        .cardImage{
+        width: 100%;
+    }
+    .titleContent{
+        font-size: large;
+    }
+    .descriptionText{
+        font-size: medium;
+    }
+    .dataGenres{
+        font-size: small;
+        border-radius: 0.25rem;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .cardImage{
+        width: 100%;
+    }
+
+    .titleContent{
+        font-size:large;
+    }
+    .descriptionText{
+        font-size: medium;
+    }
+    .dataGenres{
+        font-size: small;
+        border-radius: 0.25rem;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .cardImage{
+        width: 100%;
+    }
+    .titleContent{
+        font-size: x-large;
+    }
+    .descriptionText{
+        font-size: medium;
+    }
+    .dataGenres{
+        font-size: small;
+        border-radius: 0.25rem;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .cardImage{
+        width: 100%;
+    }
+    .titleContent{
+        font-size: xx-large;
+    }
+    .descriptionText{
+        font-size: medium;
+    }
+    .dataGenres{
+        font-size: small;
+        border-radius: 0.25rem;
+        font-weight: 700;
+    }
+}

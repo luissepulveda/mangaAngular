@@ -1,0 +1,18 @@
+
+<div class="container containerManga">
+    <div class="row contentManga">
+        <div class="col-4 col-lg-4 col-md-5 col-sm-5">
+            <img [src]="dataManga?.url" alt="" class="cardImage">
+        </div>
+        <div class="col-8 col-lg-8 col-md-7 col-sm-7 titleContent">
+            <p>{{dataManga?.attributes?.title?.en}}</p>
+            <sub class="text-muted" *ngFor="let dataTitle of dataManga?.attributes?.altTitles">{{dataTitle.ja}}</sub>
+            <hr>
+            <sub class="text-muted dataGenres">{{dataManga?.genre}}</sub>
+            
+        </div>
+        <div class="col">
+            <p class="descriptionText">{{dataManga?.attributes?.description?.en}}</p>
+        </div>
+    </div>
+</div>

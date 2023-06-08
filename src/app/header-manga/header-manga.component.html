@@ -1,0 +1,39 @@
+<!-- OFFCANVAS -->
+<div>
+    <ng-template #content let-offcanvas>
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title">Offcanvas title</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')">
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <p>One fine body&hellip;</p>
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-dark"
+                    (click)="offcanvas.close('Close click')">Close</button>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div class="container-fluid">
+    <div class="row justify-content-between">
+        <div class="col-4">
+            <button class="botoncito btn btn-lg btn-light mb-2 me-2" (click)="openScroll(content)">
+                <span data-v-f8916563="" class="flex relative items-center justify-center font-medium select-none w-full"
+                    style="pointer-events: none; justify-content: center;">
+                    <svg data-v-345ce79d="" data-v-f8916563="" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        fill="none" viewBox="0 0 24 24" class="icon" style="color: currentcolor;">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12 h12 M3 6h 18 M3 18 h17">
+                        </path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+            <div class="col-4 d-flex justify-content-end">
+                Nombre Pagina
+            </div>
+      </div>
+</div>
+
