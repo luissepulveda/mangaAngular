@@ -1,8 +1,6 @@
 
 
 
-
-
 @media only screen and (max-width: 575px) {
     .cardImage{
         width: 100%;
@@ -14,9 +12,11 @@
         font-size: small;
     }
     .dataGenres{
-        font-size: small;
+        font-size: x-small;
         border-radius: 0.25rem;
         font-weight: 700;
+        background-color: gray;
+        margin-left: 10px;
     }
 }
 
@@ -31,9 +31,11 @@
         font-size: medium;
     }
     .dataGenres{
-        font-size: small;
+        font-size: x-small;
         border-radius: 0.25rem;
         font-weight: 700;
+        background-color: gray;
+        margin-left: 10px;
     }
 }
 
@@ -49,9 +51,11 @@
         font-size: medium;
     }
     .dataGenres{
-        font-size: small;
+        font-size: x-small;
         border-radius: 0.25rem;
         font-weight: 700;
+        background-color: gray;
+        margin-left: 10px;
     }
 }
 
@@ -66,9 +70,11 @@
         font-size: medium;
     }
     .dataGenres{
-        font-size: small;
+        font-size: x-small;
         border-radius: 0.25rem;
         font-weight: 700;
+        background-color: gray;
+        margin-left: 10px;
     }
 }
 
@@ -83,8 +89,13 @@
         font-size: medium;
     }
     .dataGenres{
-        font-size: small;
+        font-size: x-small;
         border-radius: 0.25rem;
         font-weight: 700;
+        background-color: rgb(236, 232, 232);
+        margin-left: 10px;
     }
+    
+
+
 }

@@ -87,13 +87,28 @@ export class BodyMangaComponent {
 
         //Data genre
         let dataGenre = manga?.attributes.tags.map((dataGenre:Tag) => dataGenre.attributes.name.en)
-        manga.genre = dataGenre.slice(0, 3).join(', ')
-
+        manga.genre = dataGenre.slice(0, 3)
+        
+        //Limito la cantidad de palabras permitidas para la sinopsis del manga
+        const limitePalabras = 120
+        let texto = manga?.attributes?.description?.en
+        let palabras = texto?.split(' ');
+        let textoLimitado = undefined;
+        if(palabras?.length == undefined){
+          textoLimitado = 'Without sinopsis'
+          manga.description = textoLimitado
+        }else{
+          textoLimitado = palabras?.length > limitePalabras ? palabras?.slice(0, limitePalabras).join(' ') + "..." : texto;
+          manga.description = textoLimitado
+        }
+        
+        // ------------------------------------------------------------------------------------------------------------------------------------------
         let nameManga : any
         nameManga = manga.attributes.title.en
         let nameReplace = nameManga?.replace(/[^a-zA-Z0-9\s]/g, '')?.replace(/\s+/g, '-')?.replace(/-+/g, '-')
         manga.name = nameReplace
 
+        console.log(manga)
 
         // Api para Cover Name
         this.mangaService.getCoverName(coverId).subscribe((coverName: any) => {
@@ -122,7 +137,7 @@ export class BodyMangaComponent {
               initial: 0,
               slides: {
                 perView: 4,
-                spacing: 10,
+                spacing: 5,
               },
               loop:true
             },
@@ -139,7 +154,6 @@ export class BodyMangaComponent {
           this.mangaService?.getScanName(idScan)?.subscribe((dataScan: any) => {
             manga.nombreScan = dataScan?.data?.attributes?.name
           })
-          console.log(manga)
         }
         )
       });

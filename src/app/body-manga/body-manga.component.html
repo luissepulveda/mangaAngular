@@ -6,12 +6,8 @@
                     <div class="card keen-slider__slide">
                         <img class="card-img-top cardImagenFirstCarousel" [src]="data?.url" alt="Card image cap">
                         <div class="card-body">
-
-
                             <!-- Enviar objeto con navigateToManga -->
                             <!-- <h5 hre class="card-title" (click)="navigateToManga(data.id, data)">{{ data.attributes.title.en }}</h5> -->
-
-
                             <!-- Enviar objeto con routerLink -->
                             <h5 hre class="card-title" [routerLink]="['/manga/', data.id, data.name]" [state]="data" >{{ data.attributes.title.en }}</h5>
                             <div>
@@ -51,7 +47,7 @@
                                   <h5 class="card-title">{{dataManga.attributes.title.en}}</h5>
                                   <hr>
                                   <p class="card-text text-muted">{{dataManga.genre}}</p>
-                                  <p class="card-text text-muted sinopsis">{{dataManga.attributes.description.en}}</p>
+                                  <p class="card-text text-muted sinopsis">{{dataManga.description}}</p>
                                 </div>
                               </div>
                             </div>

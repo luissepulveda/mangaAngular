@@ -19,7 +19,7 @@ export class MangaDataService {
   getData(){
     let options = {
       params:{
-        limit:20
+        limit:12
       }
     }
     return this.http.get(this.urlApi + '/manga/', options)

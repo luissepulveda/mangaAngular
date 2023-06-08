@@ -7,11 +7,10 @@ export interface MangaDataInfo{
     data:any[]
     url?:string
     chapter?: string
-    genre?:string
+    genre?:string[]
     name?:string
     altTitle?:string
-
-
+    description?:string
 }
 
 export interface AttributeManga{

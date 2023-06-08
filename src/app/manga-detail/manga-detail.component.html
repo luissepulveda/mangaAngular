@@ -8,8 +8,7 @@
             <p>{{dataManga?.attributes?.title?.en}}</p>
             <sub class="text-muted" *ngFor="let dataTitle of dataManga?.attributes?.altTitles">{{dataTitle.ja}}</sub>
             <hr>
-            <sub class="text-muted dataGenres">{{dataManga?.genre}}</sub>
-            
+            <sub class="text-muted dataGenres" *ngFor="let dataGenre of dataManga?.genre">{{dataGenre}} </sub>   
         </div>
         <div class="col">
             <p class="descriptionText">{{dataManga?.attributes?.description?.en}}</p>

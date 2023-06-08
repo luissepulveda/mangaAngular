@@ -17,7 +17,7 @@ export class MangaDetailComponent {
     //Obtener objeto con routerLink
     this.dataManga =  history.state
 
-    console.log(this.dataManga)
+    // console.log(this.dataManga?.genre?.map((element:any) => element))
   }
   
 
