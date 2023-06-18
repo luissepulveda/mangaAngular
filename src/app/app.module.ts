@@ -8,6 +8,7 @@ import { HeaderMangaComponent } from './header-manga/header-manga.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BodyMangaComponent } from './body-manga/body-manga.component';
 import { MangaDetailComponent } from './manga-detail/manga-detail.component';
+import { MangaReaderComponent } from './manga-reader/manga-reader.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MangaDetailComponent } from './manga-detail/manga-detail.component';
     AppComponent,
     HeaderMangaComponent,
     BodyMangaComponent,
-    MangaDetailComponent
+    MangaDetailComponent,
+    MangaReaderComponent
   ],
   imports: [
     BrowserModule,

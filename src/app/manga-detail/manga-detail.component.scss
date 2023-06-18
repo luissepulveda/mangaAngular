@@ -1,101 +1,322 @@
+.cardImage {
+    opacity: 0.9
+}
+
+.containerManga {
+    position: relative;
+}
+.accordionChapter{
+    width: 100%;
+}
 
 
 
 @media only screen and (max-width: 575px) {
-    .cardImage{
+    .cardImage {
         width: 100%;
     }
-    .titleContent{
-        font-size: large;
-    }
-    .descriptionText{
+
+    .titleContent {
         font-size: small;
+        font-weight: bolder;
     }
-    .dataGenres{
+
+    .descriptionText {
+        font-size: xx-small;
+    }
+
+    .dataGenres {
         font-size: x-small;
         border-radius: 0.25rem;
         font-weight: 700;
-        background-color: gray;
+        background-color: #f0f1f2;
         margin-left: 10px;
     }
+
+    .buttonGenre {
+        font-size: xx-small;
+    }
+
+    .bg-Image {
+        width: 100%;
+        position: absolute;
+        height: 240px;
+        object-fit: cover;
+        opacity: 0.3;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3);
+        margin: auto;
+        border: 1px solid #aaa;
+    }
+
 }
 
 @media only screen and (min-width: 576px) {
-        .cardImage{
+    .cardImage {
         width: 100%;
     }
-    .titleContent{
+
+    .titleContent {
         font-size: large;
+        // font-weight: 900;
     }
-    .descriptionText{
-        font-size: medium;
+
+    .descriptionText {
+        font-size: xx-small;
     }
-    .dataGenres{
+
+    .dataGenres {
         font-size: x-small;
         border-radius: 0.25rem;
         font-weight: 700;
-        background-color: gray;
+        background-color: #f0f1f2;
         margin-left: 10px;
+    }
+
+    .buttonGenre {
+        font-size: x-small;
+    }
+
+    .bg-Image {
+        width: 100%;
+        position: absolute;
+        height: 240px;
+        object-fit: cover;
+        opacity: 0.3;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3);
+        margin: auto;
+        border: 1px solid #aaa;
+
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .cardImage{
+    .cardImage {
         width: 100%;
     }
 
-    .titleContent{
-        font-size:large;
+    .titleContent {
+        font-size: large;
     }
-    .descriptionText{
-        font-size: medium;
+
+    .descriptionText {
+        font-size: small;
     }
-    .dataGenres{
+
+    .buttonGenre {
         font-size: x-small;
-        border-radius: 0.25rem;
-        font-weight: 700;
-        background-color: gray;
-        margin-left: 10px;
+    }
+
+    .bg-Image {
+        width: 100%;
+        position: absolute;
+        height: 330px;
+        object-fit: cover;
+        opacity: 0.3;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3);
+        margin: auto;
+        border: 1px solid #aaa;
+
     }
 }
 
 @media only screen and (min-width: 991px) {
-    .cardImage{
+    .cardImage {
         width: 100%;
     }
-    .titleContent{
+
+    .titleContent {
         font-size: x-large;
     }
-    .descriptionText{
-        font-size: medium;
+
+    .descriptionText {
+        font-size: small;
     }
-    .dataGenres{
+
+    .dataGenres {
         font-size: x-small;
         border-radius: 0.25rem;
         font-weight: 700;
-        background-color: gray;
+        background-color: #f0f1f2;
         margin-left: 10px;
+    }
+
+    .buttonGenre {
+        font-size: x-small;
+    }
+
+    .bg-Image {
+        width: 100%;
+        position: absolute;
+        height: 330px;
+        object-fit: cover;
+        opacity: 0.3;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3);
+        margin: auto;
+        border: 1px solid #aaa;
+
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .cardImage{
+    .cardImage {
         width: 100%;
     }
-    .titleContent{
+
+    .titleContent {
         font-size: xx-large;
     }
-    .descriptionText{
+
+    .descriptionText {
         font-size: medium;
     }
-    .dataGenres{
+
+    .dataGenres {
         font-size: x-small;
         border-radius: 0.25rem;
         font-weight: 700;
-        background-color: rgb(236, 232, 232);
+        background-color: #f0f1f2;
         margin-left: 10px;
     }
-    
+
+    .buttonGenre {
+        font-size: small;
+    }
+
+    .bg-Image {
+        width: 100%;
+        position: absolute;
+        height: 410px;
+        object-fit: cover;
+        opacity: 0.3;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3);
+        margin: auto;
+        border: 1px solid #aaa;
+
+    }
+
+}
+
+@media only screen and (min-width: 1400px) {
+    .cardImage {
+        width: 100%;
+    }
+
+    .titleContent {
+        font-size: xx-large;
+    }
+
+    .descriptionText {
+        font-size: medium;
+    }
+
+    .dataGenres {
+        font-size: x-small;
+        border-radius: 0.25rem;
+        font-weight: 700;
+        background-color: #f0f1f2;
+        margin-left: 10px;
+    }
+
+    .buttonGenre {
+        font-size: small;
+    }
+
+    .bg-Image {
+        width: 100%;
+        position: absolute;
+        height: 500px;
+        object-fit: cover;
+        opacity: 0.3;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, .3);
+        margin: auto;
+        border: 1px solid #aaa;
+
+    }
+
+}
 
 
+
+.buttonGenre {
+    position: relative;
+    margin: 2px;
+    height: 10px;
+    width: fit-content;
+    padding: 0.8em 1em;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+    font-family: inherit;
+    z-index: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.buttonGenre:hover {
+    animation: sh0 0.5s ease-in-out both;
+}
+
+@keyframes sh0 {
+    0% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: rotate(7deg) translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: rotate(-7deg) translate3d(0, 0, 0);
+    }
+
+    75% {
+        transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+}
+
+.buttonGenre:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+.buttonGenre::before,
+.buttonGenre::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+    transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+    z-index: -1;
+    transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+
+.buttonGenre:hover::before,
+.buttonGenre:hover::after {
+    opacity: 0.15;
+    transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.buttonGenre:hover::before {
+    transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+.buttonGenre:hover::after {
+    transform: translate(50%, 0) scale(1.1);
 }

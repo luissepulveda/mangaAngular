@@ -3,9 +3,10 @@ export interface MangaDataInfo{
     attributes: AttributeManga
     relationships:any[]
     type:string
-    nombreScan?:string
+    scanName?:string
     data:any[]
     url?:string
+    urlCover?:string
     chapter?: string
     genre?:string[]
     name?:string
@@ -20,6 +21,7 @@ export interface AttributeManga{
     arrayGenre?:any[]
     description?:Name
     altTitles?:any[]
+    
 }
 
 export interface AttributeTag{
@@ -51,5 +53,14 @@ export interface Name{
 export interface Relationships{
     id: string
     type:string
+}
 
+export interface Cover{
+    id:string,
+    type:string,
+    attributes:attributeCover
+}
+
+export interface attributeCover{
+    fileName:string
 }

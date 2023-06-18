@@ -1,17 +1,64 @@
+<div>
+    <img class="bg-Image" [src]="dataManga.urlCover" alt="">
+</div>
 
 <div class="container containerManga">
     <div class="row contentManga">
         <div class="col-4 col-lg-4 col-md-5 col-sm-5">
-            <img [src]="dataManga?.url" alt="" class="cardImage">
+            <img [src]="dataManga.urlCover" alt="" class="cardImage">
         </div>
         <div class="col-8 col-lg-8 col-md-7 col-sm-7 titleContent">
-            <p>{{dataManga?.attributes?.title?.en}}</p>
-            <sub class="text-muted" *ngFor="let dataTitle of dataManga?.attributes?.altTitles">{{dataTitle.ja}}</sub>
-            <hr>
-            <sub class="text-muted dataGenres" *ngFor="let dataGenre of dataManga?.genre">{{dataGenre}} </sub>   
+            <p *ngIf="dataManga?.attributes?.title?.en !=undefined; else titleCondition">
+                {{dataManga.attributes.title.en}}
+            </p>
+            <ng-template #titleCondition>
+                <p *ngIf="dataManga?.attributes?.title?.ko != undefined; else secCondition">
+                    {{dataManga.attributes.title.ko}} </p>
+            </ng-template>
+            <ng-template #secCondition>
+                <p>{{dataManga.attributes.title.ja}}</p>
+            </ng-template>
+            <sub class="text-muted" *ngFor="let dataTitle of dataManga?.attributes?.altTitles">
+                <div>
+                    {{dataTitle.ja}}
+                </div>
+            </sub>
+            <hr style="margin-bottom: 0;">
+            <div style="display: inline-block; margin-top: 0 !important;" *ngFor="let dataGenre of dataManga?.genre">
+                <button class="buttonGenre">
+                    {{dataGenre}}
+                </button>
+            </div>
+            <div class="col">
+                <p class="descriptionText">{{dataManga.attributes.description?.en}}</p>
+            </div>
         </div>
-        <div class="col">
-            <p class="descriptionText">{{dataManga?.attributes?.description?.en}}</p>
+
+        <div class="col-12">
+            <br>
+            <div ngbAccordion *ngFor="let data of filteredDataMangerChapter">
+                <div ngbAccordionItem>
+                    <h2 ngbAccordionHeader>
+                        <button ngbAccordionButton>{{data.chapter}}</button>
+                    </h2>
+                    <div ngbAccordionCollapse>
+                        <div ngbAccordionBody *ngFor="let innerChapter of data.data">
+                            <p [routerLink]="['/read/']" [queryParams]="{id:innerChapter.id}">Ch.{{data.chapter}}
+                                {{innerChapter.attributes.translatedLanguage}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <button (click)="showMoreFunction()"> {{!expanded ? "See More" : "See Less"}}</button>
+
     </div>
+</div>
+
+<div class="table">
+    <tr *ngFor="let data of filteredDataMangerChapter | slice: (page-1  ) * 10 : 1 * 10">
+        <ngb-pagination [(page)]="page" [pageSize]="10" [collectionSize]="data.data.length">
+        </ngb-pagination>
+    </tr>
 </div>

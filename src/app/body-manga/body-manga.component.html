@@ -4,28 +4,33 @@
             <div class="keen-slider" #sliderRef>
                 <div *ngFor="let data of datos">
                     <div class="card keen-slider__slide">
-                        <img class="card-img-top cardImagenFirstCarousel" [src]="data?.url" alt="Card image cap">
+                        <img class="card-img-top cardImagenFirstCarousel" [src]="data?.urlCover" alt="Card image cap">
                         <div class="card-body">
-                            <!-- Enviar objeto con navigateToManga -->
-                            <!-- <h5 hre class="card-title" (click)="navigateToManga(data.id, data)">{{ data.attributes.title.en }}</h5> -->
-                            <!-- Enviar objeto con routerLink -->
-                            <h5 hre class="card-title" [routerLink]="['/manga/', data.id, data.name]" [state]="data" >{{ data.attributes.title.en }}</h5>
+                            <h5 class="card-title" [routerLink]="['/manga/']" [queryParams]="{id:data.id}" *ngIf="data?.attributes?.title?.en != undefined; else nameIf">
+                                {{ data?.attributes?.title?.en }}
+                            </h5>
+                            <ng-template #nameIf >
+                                <h5 class="card-title" [routerLink]="['/manga/', data.id, data.name]" [state]="data" *ngIf="data?.attributes?.title?.ko != undefined; else nameIf2">
+                                    {{data?.attributes?.title?.ko}}
+                                </h5>
+                            </ng-template>
+                            <ng-template #nameIf2>
+                                <h5 class="card-title" [routerLink]="['/manga/', data.id, data.name]" [state]="data">
+                                    {{data?.attributes?.title?.ja}}
+                                </h5>
+                            </ng-template>
                             <div>
                                 <hr>
-                                <!-- <p class="card-text text-muted" style="display: inline;"
-                                    *ngFor="let dataGenre of data.attributes.tags;let last = last">
-                                    {{dataGenre.attributes.name.en}}{{ last ? '' : ',' }}
-                                </p> -->
                                 <p class="card-text text-muted" style="display: inline;">
                                     {{data.genre}}
                                 </p>
                                 <p class="text-muted">Chapter: {{data.chapter}}</p>
                                 <hr>
-                                <p class="text-muted" *ngIf="data.nombreScan == undefined; else contenido">Scan: no
+                                <p class="text-muted" *ngIf="data.scanName == undefined; else contenido">Scan: no
                                     existe
                                 </p>
                                 <ng-template #contenido>
-                                    <p class="text-muted">Scan: {{data.nombreScan}}</p>
+                                    <p class="text-muted">Scan: {{data.scanName}}</p>
                                 </ng-template>
                             </div>
                         </div>
@@ -40,11 +45,23 @@
                         <div class="card mb-3" style="max-width: 100%;">
                             <div class="row no-gutters">
                               <div class="col-md-4">
-                                <img class="card-img-top cardImagenSecondCarousel" [src]="dataManga?.url" alt="Card image cap">
+                                <img class="card-img-top cardImagenSecondCarousel" [src]="dataManga?.urlCover" alt="Card image cap">
                               </div>
                               <div class="col-md-8">
                                 <div class="card-body">
-                                  <h5 class="card-title">{{dataManga.attributes.title.en}}</h5>
+                                  <h5 class="card-title" *ngIf="dataManga?.attributes?.title?.en != undefined; else nameTitleCondition">
+                                    {{dataManga?.attributes?.title?.en}}
+                                </h5>
+                                <ng-template #nameTitleCondition>
+                                    <h5 *ngIf="dataManga?.attributes?.title?.ko != undefined; else nameTitleSecCondition">
+                                        {{dataManga?.attributes?.title?.ko}}
+                                    </h5>
+                                </ng-template>
+                                <ng-template #nameTitleSecCondition>
+                                    <h5>
+                                        {{dataManga?.attributes?.title?.ja}}
+                                    </h5>
+                                </ng-template>
                                   <hr>
                                   <p class="card-text text-muted">{{dataManga.genre}}</p>
                                   <p class="card-text text-muted sinopsis">{{dataManga.description}}</p>
@@ -58,10 +75,11 @@
             <div class="keen-slider thumbnail imagenesBottom" #thumbnailRef>
                 <div class="div" *ngFor="let dataManga of datos">
                     <div class="keen-slider__slide number-slide1">
-                        <img class="card-img-top thumbnailImage" [src]="dataManga?.url" alt="Card image cap">
+                        <img class="card-img-top thumbnailImage" [src]="dataManga?.urlCover" alt="Card image cap">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+

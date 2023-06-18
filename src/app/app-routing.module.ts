@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BodyMangaComponent } from './body-manga/body-manga.component';
 import { MangaDetailComponent } from './manga-detail/manga-detail.component';
+import { MangaReaderComponent } from './manga-reader/manga-reader.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,10 @@ const routes: Routes = [
     // path: 'manga' , component: MangaDetailComponent
 
     //Obtener objeto con routerLink
-    path: 'manga/:id/:name' , component: MangaDetailComponent
+    path: 'manga' , component: MangaDetailComponent
+  },
+  {
+    path: 'read', component: MangaReaderComponent
   }
 ];
 
